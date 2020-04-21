@@ -1,8 +1,8 @@
 package org.bharath.spring.basics.understandingthespringframework;
 
-public class BubbleSortAlgorithm {
+public class BubbleSortAlgorithm implements SortAlgorithm{
 	
-	public int[] bubbleSort(int [] numbers) {
+	public int[] sort(int [] numbers) {
 		
 		//Bubble sort algorithm 
 		

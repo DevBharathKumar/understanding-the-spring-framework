@@ -1,8 +1,8 @@
 package org.bharath.spring.basics.understandingthespringframework;
 
-public class QuickSortAlgorithm {
+public class QuickSortAlgorithm implements SortAlgorithm{
 
-	public int[] quickSort(int [] numbers) {
+	public int[] sort(int [] numbers) {
 		
 		//Quick sort algorithm 
 		
