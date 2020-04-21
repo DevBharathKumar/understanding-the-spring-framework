@@ -1,5 +1,6 @@
 package org.bharath.spring.basics.understandingthespringframework;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
