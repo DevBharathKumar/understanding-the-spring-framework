@@ -8,6 +8,10 @@ public class UnderstandingTheSpringFrameworkApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(UnderstandingTheSpringFrameworkApplication.class, args);
+		
+		BinarySearchImpl binarySearchImpl = new BinarySearchImpl();
+		System.out.println("# Searched output : "+binarySearchImpl.binarySearch(new int[] {1, 0,6},3));
+		
 	}
 
 }
