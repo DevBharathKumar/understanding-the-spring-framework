@@ -1,0 +1,16 @@
+Analysing the log file 
+
+2020-04-21 21:12:02.066 DEBUG 7588 --- [           main] o.s.c.a.ClassPathBeanDefinitionScanner   : 
+Identified candidate component class: file [E:\Programming\Spring-Framework\Sping-Framework-by-in28minutes\understanding-the-spring-framework\target\classes\org\bharath\spring\basics\understandingthespringframework\BinarySearchImpl.class]
+
+2020-04-21 21:12:02.067 DEBUG 7588 --- [           main] o.s.c.a.ClassPathBeanDefinitionScanner   : 
+Identified candidate component class: file [E:\Programming\Spring-Framework\Sping-Framework-by-in28minutes\understanding-the-spring-framework\target\classes\org\bharath\spring\basics\understandingthespringframework\BubbleSortAlgorithm.class]
+
+2020-04-21 21:12:02.443 DEBUG 7588 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : 
+Creating shared instance of singleton bean 'binarySearchImpl'
+
+2020-04-21 21:12:02.457 DEBUG 7588 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : 
+Creating shared instance of singleton bean 'bubbleSortAlgorithm'
+
+2020-04-21 21:12:02.459 DEBUG 7588 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : 
+Autowiring by type from bean name 'binarySearchImpl' via constructor to bean named 'bubbleSortAlgorithm'
