@@ -1,17 +1,18 @@
 package org.bharath.spring.basics.understandingthespringframework;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BinarySearchImpl 
 {
-	
-	@Autowired
-	private SortAlgorithm bubbleSortAlgorithm;
 
-	public BinarySearchImpl(SortAlgorithm bubbleSortAlgorithm) {
-		this.bubbleSortAlgorithm = bubbleSortAlgorithm;
+	private SortAlgorithm sortAlgorithm;
+
+	@Autowired
+	public BinarySearchImpl(@Qualifier("bubble") SortAlgorithm sortAlgorithm) {
+		this.sortAlgorithm = sortAlgorithm;
 	}
  
 	public int binarySearch(int[] numbers, int numberToBeFound) {
@@ -19,10 +20,10 @@ public class BinarySearchImpl
 
 		// Call the bubble sort
 
-		int[] sortedResult = bubbleSortAlgorithm.sort(numbers);
+		int[] sortedResult = sortAlgorithm.sort(numbers);
 
 		// TO check which algorithm is been used
-		System.out.println(bubbleSortAlgorithm);
+		System.out.println(sortAlgorithm);
 
 		// Search the array
 
