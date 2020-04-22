@@ -14,6 +14,14 @@ public class UnderstandingTheSpringFrameworkApplication {
 		
 		System.out.println("# Searched output : "+binarySearchImpl.binarySearch(new int[] {1, 0,6},3));
 		
+		//Understanding the singleton and prototype scope
+		//Singleton
+		System.out.println("#1 Singleton : "+applicationContext.getBean(BubbleSortAlgorithm.class));
+		System.out.println("#2 Singleton : "+applicationContext.getBean(BubbleSortAlgorithm.class));
+		//Prototype
+		System.out.println("#1 Prototype : "+applicationContext.getBean(QuickSortAlgorithm.class));
+		System.out.println("#2 Prototype : "+applicationContext.getBean(QuickSortAlgorithm.class));
+		
 	}
 
 }
