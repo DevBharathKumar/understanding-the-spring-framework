@@ -1,4 +1,4 @@
-package org.bharath.spring.basics.understandingthespringframework;
+package org.bharath.spring.basics.understandingthespringframework.basic;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

@@ -1,5 +1,8 @@
 package org.bharath.spring.basics.understandingthespringframework;
 
+import org.bharath.spring.basics.understandingthespringframework.basic.BinarySearchImpl;
+import org.bharath.spring.basics.understandingthespringframework.basic.BubbleSortAlgorithm;
+import org.bharath.spring.basics.understandingthespringframework.basic.QuickSortAlgorithm;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;

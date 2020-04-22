@@ -1,4 +1,4 @@
-package org.bharath.spring.basics.understandingthespringframework;
+package org.bharath.spring.basics.understandingthespringframework.basic;
 
 public interface SortAlgorithm 
 {
