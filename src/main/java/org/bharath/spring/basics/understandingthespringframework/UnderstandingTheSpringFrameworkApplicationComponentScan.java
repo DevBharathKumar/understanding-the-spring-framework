@@ -13,7 +13,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("org.bharath.spring.basics.componentscan")
+@ComponentScan({"org.bharath.spring.basics.componentscan",
+	"org.bharath.spring.basics.understandingthespringframework"})
 public class UnderstandingTheSpringFrameworkApplicationComponentScan {
 
 	//Adding logger into the application 
@@ -44,16 +45,18 @@ public class UnderstandingTheSpringFrameworkApplicationComponentScan {
 		// When we specify org.bharath.spring.basics.componentscan alone in the @ComponentScan. The component scan will 
 		// scan for components in the org.bharath.spring.basics.componentscan package and it sub packages
 		// so the code present in the other packages (For eg org.bharath.spring.basics.understandingthespringframework) and it sub packages
-		// will not be scaned by the component scan. So the code given below will not work 
+		// will not be scanned by the component scan. So the code given below will not work 
 		
-		/*PersonDAO personDAO = applicationContext.getBean(PersonDAO.class);
+		PersonDAO personDAO = applicationContext.getBean(PersonDAO.class);
 		PersonDAO personDAO1 = applicationContext.getBean(PersonDAO.class);
 		
 		logger.info("{}",personDAO);
 		logger.info("{}",personDAO.getJdbcConnection());
 		
 		logger.info("{}",personDAO1);
-		logger.info("{}",personDAO.getJdbcConnection());*/
+		logger.info("{}",personDAO.getJdbcConnection());
+		
+		logger.info("{}",lineBreak);
 	}
 
 }
