@@ -13,14 +13,14 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-public class UnderstandingTheSpringFrameworkApplicationComponentScan {
+public class UnderstandingTheSpringFrameworkApplicationImplicitComponentScan {
 
 	//Adding logger into the application 
-	private static Logger logger = LoggerFactory.getLogger(UnderstandingTheSpringFrameworkApplicationComponentScan.class);
+	private static Logger logger = LoggerFactory.getLogger(UnderstandingTheSpringFrameworkApplicationImplicitComponentScan.class);
 	
 	public static void main(String[] args) {
 	
-		ApplicationContext applicationContext =  SpringApplication.run(UnderstandingTheSpringFrameworkApplicationComponentScan.class, args);
+		ApplicationContext applicationContext =  SpringApplication.run(UnderstandingTheSpringFrameworkApplicationImplicitComponentScan.class, args);
 		
 		String lineBreak= new String("------------------------------------------------");
 		
