@@ -1,16 +1,15 @@
 package org.bharath.spring.basics.understandingthespringframework;
 
-import org.bharath.spring.basics.understandingthespringframework.basic.BinarySearchImpl;
-import org.bharath.spring.basics.understandingthespringframework.basic.BubbleSortAlgorithm;
-import org.bharath.spring.basics.understandingthespringframework.basic.QuickSortAlgorithm;
 import org.bharath.spring.basics.understandingthespringframework.scope.PersonDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
+@Configuration
+@ComponentScan
 public class UnderstandingTheSpringFrameworkApplicationScope {
 
 	//Adding logger into the application 
@@ -18,7 +17,8 @@ public class UnderstandingTheSpringFrameworkApplicationScope {
 	
 	public static void main(String[] args) {
 	
-		ApplicationContext applicationContext =  SpringApplication.run(UnderstandingTheSpringFrameworkApplicationScope.class, args);
+		try(AnnotationConfigApplicationContext applicationContext =  
+				new AnnotationConfigApplicationContext(UnderstandingTheSpringFrameworkApplicationScope.class)){
 		
 		PersonDAO personDAO = applicationContext.getBean(PersonDAO.class);
 		PersonDAO personDAO1 = applicationContext.getBean(PersonDAO.class);
@@ -28,6 +28,8 @@ public class UnderstandingTheSpringFrameworkApplicationScope {
 		
 		logger.info("{}",personDAO1);
 		logger.info("{}",personDAO.getJdbcConnection());
+		
+		}//Try block ends here 
 	}
 
 }

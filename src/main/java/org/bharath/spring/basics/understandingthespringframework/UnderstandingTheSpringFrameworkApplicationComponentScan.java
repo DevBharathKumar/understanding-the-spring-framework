@@ -1,18 +1,15 @@
 package org.bharath.spring.basics.understandingthespringframework;
 
 import org.bharath.spring.basics.componentscan.ComponentScanDAO;
-import org.bharath.spring.basics.understandingthespringframework.basic.BinarySearchImpl;
-import org.bharath.spring.basics.understandingthespringframework.basic.BubbleSortAlgorithm;
-import org.bharath.spring.basics.understandingthespringframework.basic.QuickSortAlgorithm;
 import org.bharath.spring.basics.understandingthespringframework.scope.PersonDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
+@Configuration
 @ComponentScan({"org.bharath.spring.basics.componentscan",
 	"org.bharath.spring.basics.understandingthespringframework"})
 public class UnderstandingTheSpringFrameworkApplicationComponentScan {
@@ -22,7 +19,9 @@ public class UnderstandingTheSpringFrameworkApplicationComponentScan {
 	
 	public static void main(String[] args) {
 	
-		ApplicationContext applicationContext =  SpringApplication.run(UnderstandingTheSpringFrameworkApplicationComponentScan.class, args);
+		//Another way of closing the application context using try block which is introduced in Java 7
+		try(AnnotationConfigApplicationContext applicationContext =  
+				new AnnotationConfigApplicationContext(UnderstandingTheSpringFrameworkApplicationComponentScan.class)){
 		
 		String lineBreak= new String("------------------------------------------------");
 		
@@ -57,6 +56,8 @@ public class UnderstandingTheSpringFrameworkApplicationComponentScan {
 		logger.info("{}",personDAO.getJdbcConnection());
 		
 		logger.info("{}",lineBreak);
+		
+		}//Try block ends here 
 	}
 
 }
