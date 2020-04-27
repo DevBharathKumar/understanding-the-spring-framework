@@ -18,6 +18,10 @@ public class UnderstandingTheXmlSpringFrameworkApplication {
 		
 		ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
+		System.out.println(" ---> Printing the array "+(Object)applicationContext.getBeanDefinitionNames());
+
+		logger.info("Logging the array -> {}",(Object)applicationContext.getBeanDefinitionNames());
+		
 		XmlPersonDAO personDAO = applicationContext.getBean(XmlPersonDAO.class);
 		
 		logger.info(" {} ",personDAO);
