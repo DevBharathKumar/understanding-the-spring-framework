@@ -1,9 +1,9 @@
 package org.bharath.spring.basics.understandingthespringframework;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+import org.junit.Test;
+
+//@SpringBootTest
 class UnderstandingTheSpringFrameworkApplicationTests {
 
 	@Test
