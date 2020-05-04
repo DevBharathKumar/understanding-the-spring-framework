@@ -5,4 +5,8 @@ import javax.inject.Named;
 @Named
 public class CdiJdbcConnection {
 
+	public int[] getNumbers()
+	{
+		return null;
+	}
 }
